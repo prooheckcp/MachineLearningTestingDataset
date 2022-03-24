@@ -1,12 +1,12 @@
 # Imports
 import math
-
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
 
 dataFrame = pd.read_csv("17006903.csv")
 
@@ -14,6 +14,7 @@ dataFrame = pd.read_csv("17006903.csv")
 MODELS_DICTIONARY = {
     "Decision Tree Classifier": DecisionTreeClassifier(),
     "Naive Bayes": GaussianNB(),
+    "Neighbors": KNeighborsClassifier(),
     "Logistic regression model": LogisticRegression(max_iter=math.inf)
 }
 
